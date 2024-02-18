@@ -14,9 +14,9 @@ const Budget = () => {
     const handleBudgetChange = (event) => {
         if (event.target.value > 20000)
             alert("budget cannot exceed 20,000");
-        if (event.target.value < {totalExpenses}) 
+        else if (event.target.value < totalExpenses) 
             alert("You cannot reduce the budget value lower than the spending")
-        setNewBudget(event.target.value);
+            else setNewBudget(event.target.value);
     }
 
     /*const handleUpClick = (event) => {
@@ -28,7 +28,7 @@ const Budget = () => {
 
     return (
 <div className='alert alert-secondary'>
-<span>Budget: £{budget}</span>
+<span>Budget: £</span>
 <input type="number" step="10" value={newBudget} onChange={handleBudgetChange} /*onKeyUp={handleUpClick}*/ min={totalExpenses}  max="20000"></input>
 </div>
     );
